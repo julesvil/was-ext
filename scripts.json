@@ -1,0 +1,11 @@
+[
+		"libs/jquery.min.js", "libs/jquery-ui.min.js", "libs/base64.js", "libs/funcs.js", "libs/jquery.scrollbar.min.js",
+		"core/panelfactory.class.js", "core/facebook.class.js", "core/wattodoo.class.js", "core/wattodoo.adapter.class.js", "core/wattodoo.adapter.chrome.class.js", "core/ajax.class.js", "core/auth.class.js",
+		"classes/project.class.js", "classes/user.class.js", "classes/link.class.js", "classes/comment.class.js",
+		"controllers/panel.class.js",
+		"controllers/panel-right.class.js", "controllers/panel-right-login.class.js", "controllers/panel-right-register.class.js", "controllers/panel-right-caution-no-register.class.js", "controllers/panel-right-home.class.js", "controllers/panel-right-todo.class.js",
+		"controllers/panel-expand.class.js", "controllers/panel-expand-project.class.js",
+		"controllers/panel-major.class.js", "controllers/panel-major-me.class.js", "controllers/panel-major-link.class.js", "controllers/panel-major-project-conf.class.js",
+		"js/foreground.js",
+		"js/background.js"
+	]

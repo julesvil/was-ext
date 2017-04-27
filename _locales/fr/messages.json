@@ -1,0 +1,165 @@
+{
+	"header_title_login" : {
+		"message": "Coucou machin"
+	},
+
+
+	/* Form Register */
+
+	"___form_register_title___": {
+		"message": "<strong>S'inscrire</strong> ou <strong>se connecter</strong>"
+	},
+	"___form_register_subtitle___": {
+		"message": "Accédez à vos infos partout tout le temps !"
+	},
+	"___form_register_lastname___": {
+		"message": "Nom"
+	},
+	"___form_register_firstname___": {
+		"message": "Prénom"
+	},
+	"___form_register_email___": {
+		"message": "Email"
+	},
+	"___form_register_password___": {
+		"message": "Mot de passe"
+	},
+	"___form_register_repassword___": {
+		"message": "Confirmez le mot de passe"
+	},
+	"___form_register_button___": {
+		"message": "Créer un compte"
+	},
+	"___form_register_fb_tw___": {
+		"message": "Inscrivez-vous seulement en un clic par Facebook"
+	},
+	"___form_register_already_account___": {
+		"message": "Vous avez déjà un compte ?"
+	},
+	"___form_register_login___": {
+		"message": "Connexion"
+	},
+	"___form_register_no_register___": {
+		"message": "Je ne veux pas m'inscrire"
+	},
+
+
+	/* Form Login */
+
+	"___form_login_title___": {
+		"message": "<strong>Se connecter</strong>"
+	},
+	"___form_login_email___": {
+		"message": "Email"
+	},
+	"___form_login_password___": {
+		"message": "Mot de passe"
+	},
+	"___form_login_button___": {
+		"message": "Connexion"
+	},
+	"___form_login_fb_tw___": {
+		"message": "Connectez-vous avec Facebook"
+	},
+	"___form_login_register___": {
+		"message": "Créer un compte"
+	},
+
+	/* Home */
+
+	"___home_project_default___": {
+		"message": "Mes liens non triés"
+	},
+	"___home_logout___": {
+		"message": "Déconnexion"
+	},
+	"___home_create_account___": {
+		"message": "Créer un compte"
+	},
+	"___home_no_account___": {
+		"message": "Vous n'êtes pas enregistré"
+	},
+	"___home_form_project_name___": {
+		"message": "Nom du projet"
+	},
+	"___home_form_project_btn___": {
+		"message": "Créer"
+	},
+	"___home_form_project_btn_cancel___": {
+		"message": "Annuler"
+	},
+	"___home_overlay_choice___": {
+		"message": "Choisissez un projet"
+	},
+	"___home_btn_add_link___": {
+		"message": "Ajouter ce lien"
+	},
+	"___home_link_in___": {
+		"message": "Dans :"
+	},
+	"___home_link_added___": {
+		"message": "Lien enregistré"
+	},
+
+	/* Project */
+
+	"___project_default___": {
+		"message": "Mes liens non triés"
+	},
+	"___project_participants___": {
+		"message": "Participants :"
+	},
+	"___project_form_project_name___": {
+		"message": "Nom du projet"
+	},
+	"___project_form_project_btn___": {
+		"message": "Créer"
+	},
+	"___project_overlay_participant_title___": {
+		"message": "Inviter des amis au projet"
+	},
+
+	/* Project configuration */
+
+	"___projectconf_header___": {
+		"message": "Configuration :"
+	},
+	"___projectconf_participants___": {
+		"message": "Participants :"
+	},
+	"___projectconf_form_project_name___": {
+		"message": "Nom du projet :"
+	},
+	"___projectconf_form_project_date_start___": {
+		"message": "Date de début (optionnel) :"
+	},
+	"___projectconf_form_project_date_end___": {
+		"message": "Date de fin (optionnel) :"
+	},
+	"___projectconf_form_project_btn___": {
+		"message": "Modifier"
+	},
+	"___projectconf_form_project_btn_del___": {
+		"message": "Archiver"
+	},
+	"___projectconf_confirm_delete_participant___": {
+		"message": "Voulez-vous supprimer ce participant ?"
+	},
+	"___projectconf_impossible_delete___": {
+		"message": "Impossible de supprimer le créateur du projet"
+	},
+
+	/* Link */
+
+	"___link_my_rate___": {
+		"message": "Ma note :"
+	},
+	"___link_form_comment_txt___": {
+		"message": "Entrez votre message"
+	},
+	"___link_form_comment_button___": {
+		"message": "Envoyer"
+	}
+}
+
+

@@ -1,0 +1,55 @@
+{
+	"background": {
+		"persistent": false,
+		"scripts": [
+			"libs/jquery.min.js", "libs/base64.js", "libs/funcs.js",
+			"core/wattodoo.class.js", "core/wattodoo.adapter.class.js", "core/wattodoo.adapter.chrome.class.js", "core/facebook.class.js", "core/ajax.class.js", "core/auth.class.js",
+			"classes/user.class.js",
+			"js/background.js"
+		]
+	},
+	"browser_action": {
+		"default_icon": "img/logo.png",
+		"default_title": "Coucou"
+	},
+	"content_scripts": [
+		{
+			"js": [
+				"libs/jquery.min.js", "libs/jquery-ui.min.js", "libs/funcs.js", "libs/jquery.scrollbar.min.js",
+				"core/panelfactory.class.js", "core/content.class.js", "core/facebook.class.js", "core/wattodoo.class.js",
+				"core/wattodoo.adapter.class.js", "core/wattodoo.adapter.chrome.class.js",
+				"classes/project.class.js", "classes/user.class.js", "classes/link.class.js", "classes/comment.class.js",
+				"controllers/panel.class.js",
+				"controllers/panel-right.class.js", "controllers/panel-right-login.class.js", "controllers/panel-right-register.class.js", "controllers/panel-right-caution-no-register.class.js", "controllers/panel-right-home.class.js", "controllers/panel-right-todo.class.js",
+				"controllers/panel-expand.class.js", "controllers/panel-expand-project.class.js",
+				"controllers/panel-major.class.js", "controllers/panel-major-me.class.js", "controllers/panel-major-link.class.js", "controllers/panel-major-project-conf.class.js",
+				"js/foreground.js"
+			],
+		//	"css": ["css/font-awesome.min.css"/*"css/styles.css"*/],
+			"matches": [ "*://*/*" ]
+		}
+	],
+	"default_locale": "fr",
+	"description": "Pouet pouet",
+	"icons": {
+		"16" : "img/logo16.png",
+		"48" : "img/logo48.png",
+		"128": "img/logo128.png"
+	},
+	"manifest_version": 2,
+	"name": "Wattodoo",
+	"permissions": [ "cookies", "storage", "tabs", "webNavigation", "*://*/" ],
+	"version": "1.0",
+	"web_accessible_resources": [
+		"views/*.html",
+		"css/*.css",
+		"img/*.png",
+		"img/*.jpg",
+		"scripts.json",
+		"libs/*.js",
+		"core/*.js",
+		"classes/*.js",
+		"controllers/*.js",
+		"js/*.js"
+	]
+}
