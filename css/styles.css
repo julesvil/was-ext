@@ -167,6 +167,7 @@ a.__MSG_@@extension_id__-ext-head-close .fa { font-size:12px; color:#fff; }
 .__MSG_@@extension_id__-ext-preview-link .__MSG_@@extension_id__-ext-preview-link-desc           { font-size:10px; color:#000; }
 .__MSG_@@extension_id__-ext-preview-link .__MSG_@@extension_id__-ext-preview-link-host           { font-size:10px; color:#aaa; }
 .__MSG_@@extension_id__-ext-wrap-btn-add-link             { height:75px; border-bottom:1px solid #b4b4b4; }
+.__MSG_@@extension_id__-ext-wrap-btn-add-link .__MSG_@@extension_id__-ext-btn-add-link { padding:8px; width:240px; }
 .__MSG_@@extension_id__-ext-wrap-btn-add-link.__MSG_@@extension_id__-ext-link-added             { border:1px solid ___MAJOR_COLOR___; background:#fff; }
 .__MSG_@@extension_id__-ext-wrap-btn-add-link.__MSG_@@extension_id__-ext-link-added *         { color:___MAJOR_COLOR___; font-size:14px; }
 .__MSG_@@extension_id__-ext-wrap-btn-add-link.__MSG_@@extension_id__-ext-link-added .fa       { margin-right:5px; }

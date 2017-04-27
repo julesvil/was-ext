@@ -31,6 +31,42 @@ class PanelRightHome extends PanelRight
 			{
 				$j('.' + self.elementClass + '-content-home .' + self.elementClass + '-preview-link-wrap-img .' + self.elementClass + '-link-img-nav').hide();
 			}
+
+			var myprojects = Wattodoo.USER._myprojects,
+					hasLink    = false,
+					mylinks, k1, k2;
+
+			loopmaster:
+			for ( k1 in myprojects )
+			{
+				if ( myprojects.hasOwnProperty(k1) )
+				{
+					mylinks = myprojects[k1].links;
+
+					for ( k2 in mylinks )
+					{
+						if ( mylinks.hasOwnProperty(k2) )
+						{
+							if ( Wattodoo.LINK.url == mylinks[k2].url ) {
+								hasLink = true;
+								break loopmaster;
+							}
+						}
+					}
+				}
+			}
+
+			if ( hasLink === true )
+			{
+				var regLocale = new RegExp( '___' + self.prefix_locale + '_([0-9a-z_]+)___', 'g' );
+				var html      = '<i class="fa fa-check"></i><span>___home_link_added___</span>';
+
+				$j('.' + self.elementClass + '-content-home .' + self.elementClass + '-wrap-btn-add-link')
+					.addClass(self.elementClass + '-link-added ' + self.elementClass + '-layout-row ' + self.elementClass + '-hcenter ' + self.elementClass + '-vcenter')
+					.html(
+						html.replace( regLocale, function( match, p1 ) { return WattodooAdapter.getLocale( '___' + self.prefix_locale + '_' + p1 + '___' ); })
+					);
+			}
 		});
 
 		var navImage = 0;
