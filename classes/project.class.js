@@ -123,6 +123,8 @@ class Project
 				}
 
 
+				console.log(aDatas);
+
 				if ( aDatas.length == 0 )
 				{
 					ul = $j('<p/>').addClass('__MSG_@@extension_id__-ext-no-result __MSG_@@extension_id__-ext-list').text('Aucun projet dans cette catégorie');
@@ -131,7 +133,12 @@ class Project
 					for ( k in aDatas ) {
 						if ( aDatas.hasOwnProperty(k) && aDatas[k].id_parent === '0' )
 						{
-							li = $j('<li/>').html( '<a href="#" data-type="' + oParams.type + '" data-id="' + aDatas[k].id + '">' + aDatas[k].name + '</a>' );
+							li = $j('<li/>')
+											.html( '<a href="#" class="__MSG_@@extension_id__-ext-layout-row __MSG_@@extension_id__-ext-vcenter" data-type="' + oParams.type + '" data-id="' + aDatas[k].id + '">\
+																<i class="fa fa-eye"></i>\
+																<span class="__MSG_@@extension_id__-ext-flex">' + aDatas[k].name + '</span>\
+																<span class="count">' + Object.size(aDatas[k].links) + '</span>\
+															</a>' );
 
 							ul.append(li);
 						}

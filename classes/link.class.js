@@ -19,7 +19,7 @@ class Link
 	set title(value) { return this._title = value; }
 
 	get rate()       {
-		if ( typeof( this.rates ) === 'undefined' || this.rates.length == 0 ) {
+		if ( !isset( this.rates ) || this.rates.length == 0 ) {
 			return 0;
 		}
 		
