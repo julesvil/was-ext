@@ -47,7 +47,6 @@ class Ajax
 			dataType  : 'json',
 
 			beforeSend: function() {
-				console.log('ajax jq before send');
 				if ( isset( self.callback ) )
 				{
 					self.loading();
@@ -84,7 +83,8 @@ class Ajax
 						self.callback( data );
 					}
 					else {
-						alert( data.error );
+						//alert( data.error );
+						self.displayMessage( data.error );
 					}
 
 					self.endLoading();
@@ -125,6 +125,14 @@ class Ajax
 		});
 
 		clearInterval(this.SI);
+	}
+
+
+	displayMessage( message, type )
+	{
+		type = type || 'error';
+
+		WattodooAdapter.$emitback('displayMessage', {type: type, message: message}, function() {});
 	}
 
 

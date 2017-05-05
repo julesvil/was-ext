@@ -21,3 +21,7 @@ WattodooAdapter.$on('closePanel', function() {
 	var p = new PanelRight();
 	p.close();
 });
+
+WattodooAdapter.$on('displayMessage', function( action, oParams ) {
+	Panel.displayMessage( oParams );
+});

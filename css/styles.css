@@ -49,6 +49,10 @@ div.__MSG_@@extension_id__-ext-overlay header a.__MSG_@@extension_id__-ext-overl
 div.__MSG_@@extension_id__-ext-overlay header a .fa { color:#6b6b6b; font-size:12px; }
 
 
+div.__MSG_@@extension_id__-ext-tip-message        { position:absolute; left:10px; right:10px; top:10px; box-shadow:0 0 5px rgba(0,0,0,0.5); padding:10px; border-radius:3px; text-align:center; }
+div.__MSG_@@extension_id__-ext-tip-message-error  { background:#f2dede; border:1px solid #ab4f4f; color:#ab4f4f; }
+
+
 
 .__MSG_@@extension_id__-ext,
 .__MSG_@@extension_id__-ext *               { font:normal 12px/14px Arial,sans-serif; color:#000; height:auto; width:auto; margin:0; padding:0; text-align:left; background:transparent; border:0; border-radius:0; box-shadow:none; box-sizing:border-box; text-decoration:none; outline:0; list-style:none; }

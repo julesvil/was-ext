@@ -157,4 +157,23 @@ class Panel {
 	{
 		return $j('.' + WattodooAdapter.getLocale( '@@extension_id' ) + '-ext').length >= 1;
 	}
+
+	static displayMessage( oParams )
+	{
+		var divMsg = $j('<div/>')
+			.text( oParams.message )
+			.addClass( WattodooAdapter.getLocale( '@@extension_id' ) + '-ext-tip-message' )
+			.addClass( WattodooAdapter.getLocale( '@@extension_id' ) + '-ext-tip-message-' + oParams.type );
+
+		$j('.' + WattodooAdapter.getLocale( '@@extension_id' ) + '-ext:first').append( divMsg );
+
+		divMsg.hide();
+		divMsg.slideDown();
+
+		setTimeout(function() {
+			divMsg.slideUp(function() {
+				divMsg.remove();
+			});
+		}, 2000);
+	}
 }
