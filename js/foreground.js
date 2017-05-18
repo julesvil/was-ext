@@ -25,3 +25,7 @@ WattodooAdapter.$on('closePanel', function() {
 WattodooAdapter.$on('displayMessage', function( action, oParams ) {
 	Panel.displayMessage( oParams );
 });
+
+WattodooAdapter.$on('callbackCreateProject', function( action, oParams ) {
+	PanelRightHome.callbackCreateProject( oParams );
+});

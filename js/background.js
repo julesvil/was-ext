@@ -69,8 +69,25 @@ WattodooAdapter.$on( 'auth_no_account', function() {
 	});
 });
 
+WattodooAdapter.$on( 'create_project', function( action, oParams ) {
+	var oAjax      = new Ajax( action, {name: oParams.name} );
+	oAjax.method   = 'post';
+	oAjax.callback = function( oDataReturned ) {
+		var id_project;
+
+		if ( isset( Auth.token ) ) {
+			id_project = oDataReturned.id_project;
+		}
+		else {
+			id_project = oParams.id_temp;
+		}
+
+		WattodooAdapter.$emitback('callbackCreateProject', {id_project: id_project, name: oParams.name, typeproject: oParams.typeproject, classname: oParams.classname}, function() {});
+	};
+	oAjax.send();
+});
+
 WattodooAdapter.$on([
-		'create_project',
 		'update_project',
 		'archive_project',
 		'delete_user',

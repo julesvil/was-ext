@@ -309,22 +309,13 @@ class PanelRightHome extends PanelRight
 		// Soumission formulaire ajout projet
 		$j(doc).on('submit', '.' + self.elementClass + '-form-add-project', function()
 		{
-			var newprojectname = $j(this).find('input[name="project"]').val();
-			var typeproject    = $j(this).find('input[name="type_project"]').val();
-			var newidproject   = 'new' + parseInt( Object.keys(Wattodoo.USER[typeproject] ).length );
+			var form           = $j(this),
+			    newprojectname = form.find('input[name="project"]').val(),
+			    typeproject    = form.find('input[name="type_project"]').val(),
+			    newidproject   = 'new' + parseInt( Object.keys(Wattodoo.USER[typeproject] ).length );
 
-			Wattodoo.USER[typeproject][newidproject] = $j.extend({}, newProject(), {id: newidproject, name: newprojectname});
-			
-			WattodooAdapter.setStorage( {'User': Wattodoo.USER} );
 
-			var li = $j('<li/>').html( '<a href="#" data-type="' + typeproject + '" data-id="' + newidproject + '">' + newprojectname + '</a>' );
-			$j(this).prev('ul').append(li);
-
-			PanelFactory.load('panel-project', {type: typeproject, id: newidproject});
-
-			WattodooAdapter.$emit('create_project', {name: newprojectname} );
-
-			$j(this).remove();
+			WattodooAdapter.$emit('create_project', {name: newprojectname, id_temp:newidproject, classname:'.' + self.elementClass + '-form-add-project', typeproject:typeproject} );
 
 			return false;
 		});
@@ -344,5 +335,28 @@ class PanelRightHome extends PanelRight
 			PanelFactory.load('panel-todo');
 			return false;
 		});
+	}
+
+
+	static callbackCreateProject( oParams )
+	{
+		var form = $j(oParams.classname);
+
+		Wattodoo.USER[oParams.typeproject][oParams.id_project] = $j.extend({}, newProject(), {id: oParams.id_project, name: oParams.name});
+
+		WattodooAdapter.setStorage( {'User': Wattodoo.USER} );
+
+		var li = $j('<li/>').html(
+				'<a href="#" class="'+WattodooAdapter.getLocale( '@@extension_id' )+'-ext-layout-row '+WattodooAdapter.getLocale( '@@extension_id' )+'-ext-vcenter" data-type="' + oParams.typeproject + '" data-id="' + oParams.id_project + '">\
+					<i class="fa fa-eye"></i>\
+					<span class="'+WattodooAdapter.getLocale( '@@extension_id' )+'-ext-flex">' + escapeHTML( oParams.name ) + '</span>\
+					<span class="count">0</span>\
+				</a>'
+		);
+		form.prev('ul').append(li);
+
+		PanelFactory.load('panel-project', {type: oParams.typeproject, id: oParams.id_project});
+
+		form.remove();
 	}
 }

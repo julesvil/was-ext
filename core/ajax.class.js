@@ -90,7 +90,8 @@ class Ajax
 					self.endLoading();
 				}
 				else if ( isset( data.error ) ) {
-					alert( data.error );
+					//alert( data.error );
+					self.displayMessage( data.error );
 				}
 			}
 		});
